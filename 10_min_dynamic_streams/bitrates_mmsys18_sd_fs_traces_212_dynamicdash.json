@@ -1,0 +1,1223 @@
+{
+    "traces_file": "./temp_traces/mmsys18_sd_fs_traces_212.json",
+    "abr_algorithm": "dynamicdash",
+    "manifest_file": "/home/jonathan/prg/ex/sabre/manifests/green_abr_manifest.json",
+    "bitrate_choices": [
+        {
+            "time_ms": 0,
+            "bitrate_kbps": 150
+        },
+        {
+            "time_ms": 377.14285714285717,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 1111.4285714285716,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 1845.7142857142858,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 2580.0,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 3314.285714285714,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 4048.5714285714284,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 4782.857142857143,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 5507.476635514019,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 7279.813084112149,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 9052.14953271028,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 10746.83597883598,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 12354.137566137566,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 13961.439153439153,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 15646.76293622142,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 17471.817087845968,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 19296.871239470514,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 20126.074374577413,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 20348.914131169706,
+            "bitrate_kbps": 1200
+        },
+        {
+            "time_ms": 20693.457741717375,
+            "bitrate_kbps": 1850
+        },
+        {
+            "time_ms": 21213.795807978364,
+            "bitrate_kbps": 2850
+        },
+        {
+            "time_ms": 22004.586883029075,
+            "bitrate_kbps": 4300
+        },
+        {
+            "time_ms": 23187.534820824883,
+            "bitrate_kbps": 4300
+        },
+        {
+            "time_ms": 24370.482758620692,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 26027.512342292925,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 27693.1513987932,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 29377.14285714286,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 31377.14285714286,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 33377.14285714286,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 35799.2723299645,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 37377.14285714287,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 39691.597924064474,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 41377.14285714287,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 43768.996856352256,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 45411.31564088087,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 48066.361754187856,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 49843.05916305918,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 51506.40669065449,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 53977.053389088804,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 55603.3802764497,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 57377.14285714287,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 59741.19807266573,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 62306.826484018275,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 64039.155251141565,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 65748.31280276818,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 68259.66228373704,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 69940.56193771628,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 71710.97707024976,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 74359.86563458451,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 76043.73939965003,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 77679.03082514471,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 80130.9393063584,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 81885.04335260116,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 83639.14739884394,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 86658.04182509508,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 88959.41064638784,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 90926.08574221478,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 92621.82935344227,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 94317.57296466976,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 95978.47357065805,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 97616.59654800432,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 100063.5240397529,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 101695.1275852807,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 104132.5329035724,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 105778.99233296825,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 107441.92771084339,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 109926.3307776561,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 111548.76584389595,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 113970.36691127419,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 115648.25972506581,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 118300.60836501903,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 120074.78563151797,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 121832.90845886443,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 123591.0312862109,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 126272.59192010896,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 128108.29777576034,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 129944.00363141172,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 131839.55270566157,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 133736.3121676572,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 136475.02348796243,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 138256.62066940696,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 140754.60869565225,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 141959.3913043479,
+            "bitrate_kbps": 4300
+        },
+        {
+            "time_ms": 142014.17391304355,
+            "bitrate_kbps": 2850
+        },
+        {
+            "time_ms": 142068.9565217392,
+            "bitrate_kbps": 1850
+        },
+        {
+            "time_ms": 142123.73913043484,
+            "bitrate_kbps": 1200
+        },
+        {
+            "time_ms": 149018.72159090915,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 153426.63716814166,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 155215.27859237543,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 156994.80938416428,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 158774.34017595314,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 160542.72988505755,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 162286.86781609204,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 164031.00574712653,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 165890.26402640276,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 167890.46204620472,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 169890.6600660067,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 171655.8670520232,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 173409.971098266,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 177702.74011299445,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 179417.65536723172,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 181226.0856269114,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 183080.94801223252,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 184935.8103975536,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 186649.4366197184,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 188359.57746478883,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 190069.5224719102,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 191774.91573033718,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 193480.30898876413,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 195190.51873198856,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 199533.28530259375,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 200041.0621020578,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 200116.42797822278,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 200274.84266863525,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 200433.2573590477,
+            "bitrate_kbps": 1200
+        },
+        {
+            "time_ms": 200674.72086370768,
+            "bitrate_kbps": 1850
+        },
+        {
+            "time_ms": 201377.14285714287,
+            "bitrate_kbps": 2850
+        },
+        {
+            "time_ms": 203377.14285714287,
+            "bitrate_kbps": 4300
+        },
+        {
+            "time_ms": 205377.14285714287,
+            "bitrate_kbps": 4300
+        },
+        {
+            "time_ms": 207377.14285714287,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 209377.14285714287,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 211377.14285714287,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 213377.1428571429,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 215377.1428571429,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 217377.1428571429,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 219377.1428571429,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 221530.36023108696,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 223377.1428571429,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 225531.96050206508,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 227812.0603231405,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 229527.13518894708,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 231819.39975079912,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 233545.88439243732,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 235826.08216846,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 237521.9037865589,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 239776.33261069073,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 241383.6549327467,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 243503.75993799695,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 246131.8508606809,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 249009.44730456086,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 251652.5077952772,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 253340.7964092074,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 255020.22120350174,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 256780.02402584854,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 258539.82684819534,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 260275.69980179908,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 261896.5535904864,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 263517.4073791737,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 266434.87342287344,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 269873.6768416769,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 271064.0074936225,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 272758.11463647964,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 274452.2217793368,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 276143.1393592496,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 277832.58844105265,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 279522.0375228557,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 281715.61952762393,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 283377.14285714296,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 285582.43054715544,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 287860.4040159672,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 289573.884117576,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 291846.6454907323,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 293555.3592537494,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 295814.898242185,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 297498.9455750869,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 299737.67535228946,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 301394.0150730344,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 303589.5045581685,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 305798.52967134304,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 307478.28070868744,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 309711.28209181334,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 312133.32196334633,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 313974.44701393315,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 315763.0740520367,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 317486.97408990114,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 319778.8408070537,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 337844.2896497443,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 338690.735930736,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 339537.1822117277,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 341247.10506424797,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 342854.40665154957,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 344461.7082388511,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 346085.0851618843,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 347716.2559459874,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 349347.4267300906,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 350986.01113172545,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 352629.38775510207,
+            "bitrate_kbps": 1200
+        },
+        {
+            "time_ms": 355234.84478446376,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 356799.64396057086,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 358364.44313667796,
+            "bitrate_kbps": 1200
+        },
+        {
+            "time_ms": 360860.5530908016,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 362433.34812185745,
+            "bitrate_kbps": 1200
+        },
+        {
+            "time_ms": 364937.8201715469,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 366605.3402483106,
+            "bitrate_kbps": 1200
+        },
+        {
+            "time_ms": 369265.6042747132,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 370906.8382576912,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 372525.98537922633,
+            "bitrate_kbps": 1200
+        },
+        {
+            "time_ms": 375102.86612758314,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 376695.1931716083,
+            "bitrate_kbps": 1200
+        },
+        {
+            "time_ms": 379230.91644204856,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 380084.0331998411,
+            "bitrate_kbps": 1200
+        },
+        {
+            "time_ms": 380360.8275503654,
+            "bitrate_kbps": 1850
+        },
+        {
+            "time_ms": 380776.71884075704,
+            "bitrate_kbps": 1850
+        },
+        {
+            "time_ms": 381192.61013114866,
+            "bitrate_kbps": 2850
+        },
+        {
+            "time_ms": 381822.49671364384,
+            "bitrate_kbps": 4300
+        },
+        {
+            "time_ms": 382762.6764696892,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 384066.64822231064,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 385489.72349578893,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 387206.3161721639,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 389771.2051867263,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 391002.20897959196,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 392736.49469387764,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 394470.7804081634,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 396184.64509743615,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 397889.88056228025,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 399595.11602712434,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 402149.9356054173,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 404115.671201569,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 406227.1950792094,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 408455.2421842143,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 410578.2988253442,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 412467.06958946376,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 414355.84035358333,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 416191.659471741,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 418000.9238852599,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 419810.1882987788,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 421684.5925225638,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 424186.2386811824,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 426040.88871604303,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 427875.7707487109,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 429710.65278137877,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 432200.8682577355,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 434078.261715583,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 436095.61744773627,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 438245.0389548935,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 440275.3633071034,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 441781.8609534821,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 443377.1428571429,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 445394.6194651146,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 447477.53849554266,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 449560.4575259707,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 452082.4575598675,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 454063.02830379514,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 455914.68094101606,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 457653.05802932155,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 459964.2274803955,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 461785.62103095144,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 464208.50449110364,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 466512.53347886325,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 469177.2587212964,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 471289.1046639736,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 473160.0044069042,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 475029.68910966546,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 476827.8181228038,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 478625.94713594223,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 480446.9466795568,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 482340.97062541835,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 484234.9945712799,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 486161.922517641,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 488110.56282622344,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 490060.03942813684,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 492035.9233790224,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 494011.807329908,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 495930.275596883,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 497792.4616576751,
+            "bitrate_kbps": 12000
+        },
+        {
+            "time_ms": 502910.8235666773,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 516786.1484437351,
+            "bitrate_kbps": 300
+        },
+        {
+            "time_ms": 517476.5395051876,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 519172.5171588189,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 520842.14827426104,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 522487.2837022133,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 524132.41913016565,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 525781.7896047308,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 527435.7765328353,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 529089.76346094,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 530738.122007722,
+            "bitrate_kbps": 1200
+        },
+        {
+            "time_ms": 533352.7166023166,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 534994.3382239382,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 536637.7148473149,
+            "bitrate_kbps": 1200
+        },
+        {
+            "time_ms": 539255.1174447174,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 540921.4300986892,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 542606.2469688334,
+            "bitrate_kbps": 1200
+        },
+        {
+            "time_ms": 545288.3537736412,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 546963.982912714,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 548639.6120517869,
+            "bitrate_kbps": 1200
+        },
+        {
+            "time_ms": 551318.8081411779,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 553007.3287195984,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 554695.8492980188,
+            "bitrate_kbps": 1200
+        },
+        {
+            "time_ms": 557388.1386624932,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 559078.517281647,
+            "bitrate_kbps": 750
+        },
+        {
+            "time_ms": 560065.0710129978,
+            "bitrate_kbps": 1200
+        },
+        {
+            "time_ms": 560311.25139185,
+            "bitrate_kbps": 1850
+        },
+        {
+            "time_ms": 560679.9461425804,
+            "bitrate_kbps": 2850
+        },
+        {
+            "time_ms": 561237.1245423541,
+            "bitrate_kbps": 2850
+        },
+        {
+            "time_ms": 561794.3029421279,
+            "bitrate_kbps": 4300
+        },
+        {
+            "time_ms": 562624.7826330147,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 563775.6845272754,
+            "bitrate_kbps": 6000
+        },
+        {
+            "time_ms": 564926.586421536,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 566882.4347823041,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 568846.069379,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 570736.9698790092,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 572526.011648051,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 574315.0534170928,
+            "bitrate_kbps": 9000
+        },
+        {
+            "time_ms": 576116.1618001907,
+            "bitrate_kbps": 9000
+        }
+    ]
+}

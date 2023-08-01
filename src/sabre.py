@@ -82,6 +82,9 @@ def deplete_buffer(time):
     global total_log_bitrate_change
     global last_played
 
+    # new
+    global nr_bitrate_changes
+
     global rampup_origin
     global rampup_time
     global rampup_threshold
@@ -113,6 +116,7 @@ def deplete_buffer(time):
         played_utility += manifest.utilities[quality]
         played_bitrate += manifest.bitrates[quality]
         if quality != last_played and last_played != None:
+            nr_bitrate_changes += 1
             total_bitrate_change += abs(manifest.bitrates[quality] -
                                         manifest.bitrates[last_played])
             total_log_bitrate_change += abs(math.log(manifest.bitrates[quality] /
@@ -371,6 +375,21 @@ class NetworkModel:
         network_total_time += time
 
     def download(self, size, idx, quality, buffer_level, check_abandon = None):
+        """
+        Parameters:
+            size (int) : The size of the segment to be downloaded.
+            idx (int) : Current segment index.
+            quality (int) : Segment quality index.
+            buffer_level (int) : Current buffer level.
+        
+        Returns:
+            DownloadProgress (namedtuple): Tuple that tracks:
+                'DownloadProgress',
+                'index quality ',
+                'size downloaded ',
+                'time time_to_first_bit ',
+                'abandon_to_quality'
+        """
         if size <= 0:
             return DownloadProgress(index = idx, quality = quality,
                                     size = 0, downloaded = 0,
@@ -1229,6 +1248,27 @@ class ReplacementInput(Replacement):
     def check_abandon(self, progress, buffer_level):
         return self.replacement.check_abandon(progress, buffer_level)
 
+def log_quality_decisions(traces_filename : str, abr : str, manifest_filename : str, quality_list : list, bitrates_dir = "./bitrates"):
+    """
+    Logs the bitrates that were chosen to a json file in the chosen directory.
+    Filename will be in the form "bitrates_{traces file}_{abr algorithm}.json.
+    """
+    new_filename = f"{bitrates_dir}/bitrates_{traces_filename.split('/')[-1][:-5]}_{abr}.json"
+    json_output = {
+        "traces_file" : traces_filename,
+        "abr_algorithm" : abr,
+        "manifest_file" : manifest_filename, 
+        "bitrate_choices" : [
+            {
+                "time_ms" : tup[0], 
+                "bitrate_kbps" : tup[1]
+             } for tup in quality_list
+             ]
+        }
+    with open(new_filename, "w") as logfile:
+        json.dump(json_output, logfile, indent=4)
+        
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description = 'Simulate an ABR session.',
                                      formatter_class = argparse.ArgumentDefaultsHelpFormatter)
@@ -1280,6 +1320,8 @@ if __name__ == '__main__':
                         help = 'Specify at what quality index we are ramped up (None matches network).')
     parser.add_argument('-v', '--verbose', action = 'store_true',
                         help = 'Run in verbose mode.')
+    parser.add_argument('-o', '--output-dir', metavar = 'BITRATES_DIR', type = str, default = "./bitrates",
+                        help = 'Specify the directory for the output logs.')
     args = parser.parse_args()
 
     verbose = args.verbose
@@ -1296,6 +1338,7 @@ if __name__ == '__main__':
     total_play_time = 0
     total_bitrate_change = 0
     total_log_bitrate_change = 0
+    nr_bitrate_changes = 0  # new
     total_reaction_time = 0
     last_played = None
 
@@ -1310,6 +1353,10 @@ if __name__ == '__main__':
     rampup_threshold = args.rampup_threshold
 
     max_buffer_size = args.max_buffer * 1000
+
+    bitrates_dir = args.output_dir
+    if not os.path.isdir(bitrates_dir):
+        os.mkdir(bitrates_dir)
 
     manifest = load_json(args.movie)
     bitrates = manifest['bitrates_kbps']
@@ -1332,9 +1379,11 @@ if __name__ == '__main__':
                                    latency   = p['latency_ms'])
                      for p in network_trace]
 
-
     buffer_size = args.max_buffer * 1000
     gamma_p = args.gamma_p
+
+    #new 
+    quality_list = []
 
     config = {'buffer_size': buffer_size,
               'gp': gamma_p,
@@ -1361,8 +1410,11 @@ if __name__ == '__main__':
     config = {'window_size': args.window_size, 'half_life': args.half_life}
     throughput_history = average_list[args.moving_average](config)
 
+    # -------------- STREAMING HAPPENS HERE !
+    
     # download first segment
     quality = abr.get_first_quality()
+    quality_list.append((0, bitrates[quality])) # new
     size = manifest.segments[0][quality]
     download_metric = network.download(size, 0, quality, 0)
     download_time = download_metric.time - download_metric.time_to_first_bit
@@ -1385,6 +1437,8 @@ if __name__ == '__main__':
      # download rest of segments
     next_segment = 1
     abandoned_to_quality = None
+
+    # This is the loop for simulating the streaming!
     while next_segment < len(manifest.segments):
 
         # TODO: BEGIN TODO: reimplement seeking - currently only proof-of-concept hack
@@ -1410,6 +1464,7 @@ if __name__ == '__main__':
 
         if abandoned_to_quality == None:
             (quality, delay) = abr.get_quality_delay(next_segment)
+            quality_list.append((total_play_time, bitrates[quality]))
             replace = replacer.check_replace(quality)
         else:
             (quality, delay) = (abandoned_to_quality, 0)
@@ -1532,7 +1587,12 @@ if __name__ == '__main__':
 
         # loop while next_segment < len(manifest.segments)
 
+    # ------------------ END OF STREAMING !
+
     playout_buffer()
+
+    # new
+    log_quality_decisions(args.network, args.abr, args.movie, quality_list, bitrates_dir=bitrates_dir)
 
     # multiply by to_time_average to get per/chunk average
     to_time_average = 1 / (total_play_time / manifest.segment_time)
@@ -1551,6 +1611,7 @@ if __name__ == '__main__':
     print('total rebuffer events: %f' % rebuffer_event_count)
     print('time average rebuffer events: %f' % (rebuffer_event_count * to_time_average))
     print('total bitrate change: %f' % total_bitrate_change)
+    print(f'nr of bitrate changes: {int(nr_bitrate_changes)}')
     print('time average bitrate change: %f' % (total_bitrate_change * to_time_average))
     print('total log bitrate change: %f' % total_log_bitrate_change)
     print('time average log bitrate change: %f' % (total_log_bitrate_change * to_time_average))
