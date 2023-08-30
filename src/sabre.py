@@ -1254,8 +1254,13 @@ def log_quality_decisions(traces_filename : str, abr : str, manifest_filename : 
     Filename will be in the form "bitrates_{traces file}_{abr algorithm}.json.
     """
     new_filename = f"{bitrates_dir}/bitrates_{traces_filename.split('/')[-1][:-5]}_{abr}.json"
+    for nt in ["3G", "4G", "hd", "sd"]:
+        if nt in traces_filename:
+            network_type = nt
+            break
     json_output = {
         "traces_file" : traces_filename,
+        "network_type" : network_type,
         "abr_algorithm" : abr,
         "manifest_file" : manifest_filename, 
         "bitrate_choices" : [

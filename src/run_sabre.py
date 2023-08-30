@@ -3,6 +3,7 @@ import subprocess
 import os
 import sys
 import time
+import random
 
 SABRE_DIR = "/home/jonathan/prg/ex/sabre"
 TRACES_DIR = SABRE_DIR + "/traces"
@@ -65,7 +66,7 @@ def run_python_script(script_file, args):
     cmd = ["python", script_file] + args
     subprocess.call(cmd)
 
-def run_sabre(script_file, video_length_s, fixed_len=False, traces_dir = TRACES_DIR, manifest_file = MANIFEST_FILE, output_dir = None):
+def run_sabre(script_file, video_length_s, fixed_len=False, traces_dir = TRACES_DIR, manifest_file = MANIFEST_FILE, output_dir = None, rand=False):
     """
     Runs Sabre with the given video length, traces, manifest file and output directory.
     
@@ -84,7 +85,12 @@ def run_sabre(script_file, video_length_s, fixed_len=False, traces_dir = TRACES_
             length_seconds = str(video_length_s)
         else:
             length_seconds = str(video_length_s[trace_file])
-        args = ["-n", traces_dir + "/" + trace_file, "-m", manifest_file, "-ml", length_seconds, "-a", ABR]
+        
+        if rand == True: 
+            abr = random.choice(["dynamicdash", "dynamic", "throughput", "bolae", "bola"])
+        else:
+            abr = ABR
+        args = ["-n", traces_dir + "/" + trace_file, "-m", manifest_file, "-ml", length_seconds, "-a", abr]
         if output_dir != None: args.extend(["-o", output_dir])
         print(f'Running Sabre for {trace_file} with "{" ".join(["python", script_file] + args)}"')
         
@@ -102,6 +108,9 @@ def main():
     if len(sys.argv) > 1:
         video_len_s = int(sys.argv[1])
         output_dir = sys.argv[2]
+    else:
+        video_len_s = 600
+        output_dir = "10_min_random_output"
     
     try:
         print("Splitting trace files into temporary dir.")
@@ -109,7 +118,7 @@ def main():
         os.mkdir(TEMP_TRACES_DIR)
         split_trace_files(video_len_s, TEMP_TRACES_DIR)
         
-        run_sabre("src/sabre.py", video_len_s, fixed_len=True, traces_dir=TEMP_TRACES_DIR, output_dir=output_dir)
+        run_sabre("src/sabre.py", video_len_s, fixed_len=True, traces_dir=TEMP_TRACES_DIR, output_dir=output_dir, rand=True)
         print("Done.")
 
         print("Removing temp trace dir.")
